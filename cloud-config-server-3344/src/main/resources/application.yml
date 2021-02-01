@@ -1,0 +1,15 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: springcloud-config-server
+  #连接远程仓库
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main # 指定main分支
+          uri: https://github.com/zoepyy/spring-cloud-study-config.git
+
+      # 通过config-server可以连接到git,访问其中的资源以及配置
